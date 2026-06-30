@@ -6,7 +6,7 @@
 <title>COWBELL CULT — Archive</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Semi+Condensed:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Barlow+Semi+Condensed:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
 <style>
   :root{
     --void:#04060c;
@@ -59,10 +59,9 @@
 
   /* ---------- chrome text ---------- */
   .chrome-text{
-    font-family:"Anton",sans-serif;text-transform:uppercase;line-height:.92;
+    font-family:"Cinzel",serif;text-transform:uppercase;line-height:.98;font-weight:900;
     background:linear-gradient(180deg,#ffffff 0%,#d6dde8 36%,#7d8799 52%,#aeb9c9 54%,#f2f6fc 74%,#9aa5b6 100%);
     -webkit-background-clip:text;background-clip:text;color:transparent;
-    -webkit-text-stroke:.6px rgba(120,150,200,.18);
     filter:drop-shadow(0 1px 0 rgba(0,0,0,.6)) drop-shadow(0 0 18px rgba(47,107,255,.12));
   }
 
@@ -82,7 +81,7 @@
     width:26px;height:26px;flex:0 0 auto;filter:drop-shadow(0 0 6px rgba(127,169,255,.35));
   }
   .brand b{
-    font-family:"Anton",sans-serif;font-size:21px;letter-spacing:.06em;
+    font-family:"Cinzel",serif;font-size:19px;letter-spacing:.06em;font-weight:700;
     text-transform:uppercase;white-space:nowrap;
   }
   nav{display:flex;gap:4px}
@@ -107,7 +106,7 @@
   /* ---------- hero ---------- */
   .hero{padding:64px 0 30px;position:relative;text-align:center}
   .hero .plate{
-    font-size:clamp(58px,16vw,160px);letter-spacing:.01em;margin:0;
+    font-size:clamp(52px,13vw,132px);letter-spacing:.02em;margin:0;
   }
   .hero .sub{
     margin:14px auto 0;max-width:640px;color:var(--ink-dim);
@@ -126,22 +125,11 @@
   .rec .dot{width:8px;height:8px;border-radius:50%;background:var(--rust);box-shadow:0 0 8px var(--rust);animation:blink 1.6s infinite}
   @keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
 
-  /* ---------- stat strip ---------- */
-  .stats{
-    display:grid;grid-template-columns:repeat(4,1fr);gap:1px;
-    background:var(--steel);border:1px solid var(--steel);border-radius:6px;overflow:hidden;
-    margin-top:40px;
-  }
-  .stat{background:linear-gradient(180deg,#0f1a2c,#0a1322);padding:20px 16px;text-align:center}
-  .stat .n{font-family:"Anton",sans-serif;font-size:34px;line-height:1;color:var(--chrome-hi)}
-  .stat .n .small{font-size:17px;color:var(--chrome-lo)}
-  .stat .l{font-family:"Space Mono",monospace;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--chrome-lo);margin-top:9px}
-
   /* ---------- section heads ---------- */
   .sec-head{margin:62px 0 6px;display:flex;align-items:baseline;gap:14px}
   .sec-head h2{
-    font-family:"Anton",sans-serif;text-transform:uppercase;letter-spacing:.04em;
-    font-size:clamp(28px,5vw,44px);margin:0;color:var(--chrome-hi);
+    font-family:"Cinzel",serif;text-transform:uppercase;letter-spacing:.04em;font-weight:800;
+    font-size:clamp(26px,4.4vw,40px);margin:0;color:var(--chrome-hi);
   }
   .sec-head .num{font-family:"Space Mono",monospace;color:var(--ice);font-size:13px;letter-spacing:.1em}
   .lede{color:var(--ink-dim);max-width:680px;margin:0 0 8px}
@@ -154,7 +142,7 @@
 
   /* ---------- timeline ---------- */
   .year-band{
-    font-family:"Anton",sans-serif;font-size:13px;letter-spacing:.3em;color:var(--chrome-lo);
+    font-family:"Cinzel",serif;font-size:15px;letter-spacing:.22em;color:var(--chrome-lo);font-weight:700;
     text-transform:uppercase;margin:38px 0 4px;padding-left:42px;position:relative;
   }
   .timeline{position:relative;margin-top:14px;padding-left:42px}
@@ -199,7 +187,7 @@
     padding:16px 20px;border-bottom:1px solid var(--steel);
     background:linear-gradient(180deg,#14253f,#0e1a2e);
   }
-  .board-top .name{font-family:"Anton",sans-serif;letter-spacing:.05em;font-size:20px;color:var(--chrome-hi);text-transform:uppercase}
+  .board-top .name{font-family:"Cinzel",serif;letter-spacing:.05em;font-size:18px;font-weight:700;color:var(--chrome-hi);text-transform:uppercase}
   .online{display:inline-flex;align-items:center;gap:8px;font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.14em;color:var(--ice)}
   .online .dot{width:9px;height:9px;border-radius:50%;background:var(--ice);box-shadow:0 0 10px var(--ice);animation:pulse 1.8s infinite}
   @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
@@ -272,7 +260,6 @@
     nav{gap:2px}
     .tab{padding:7px 9px;font-size:10.5px;letter-spacing:.06em}
     main{padding:0 16px 70px}
-    .stats{grid-template-columns:repeat(2,1fr)}
     .grid-info{grid-template-columns:1fr}
     .info{border-right:none}
     .tape{flex-direction:column}
@@ -313,7 +300,7 @@
   <section class="panel active" id="overview">
     <div class="hero">
       <h1 class="plate chrome-text">Cowbell<br>Cult</h1>
-      <p class="sub">A phonk collective out of the internet underground — eight original heads, a wall of pitched 808 cowbells, and a run of cassette-style tapes that helped push Memphis phonk into the mainstream.</p>
+      <p class="sub">A phonk collective formed online in 2020, built around pitched 808 cowbells and a steady run of volume tapes in the Memphis phonk tradition.</p>
       <div class="meta">
         <span class="chip">Phonk Collective</span>
         <span class="chip">Est. <b>Oct 12, 2020</b></span>
@@ -321,23 +308,16 @@
       </div>
     </div>
 
-    <div class="stats">
-      <div class="stat"><div class="n">8</div><div class="l">Original Members</div></div>
-      <div class="stat"><div class="n">7<span class="small">+</span></div><div class="l">Volumes & Tapes</div></div>
-      <div class="stat"><div class="n">~19<span class="small">M</span></div><div class="l">"Smoke" YT Views</div></div>
-      <div class="stat"><div class="n">~60<span class="small">M</span></div><div class="l">"Smoke" Spotify</div></div>
-    </div>
-
     <div class="sec-head"><span class="num">[ 01 ]</span><h2>The Sound</h2></div>
     <div class="prose">
-      <p>Cowbell Cult built melodies out of percussion. Instead of reaching for a piano or a synth, they mapped <b>808 cowbells</b> across different pitches and stacked long-decay 808 kicks into basslines — a DIY rig of cheap drum machines, samplers and cassette recorders that gave the tapes their cold, rattling signature.</p>
-      <p>The group lived on SoundCloud and VK before breaking through on streaming. Their debut tape's standout, <b>JOEHDAH — "Smoke,"</b> became the calling card and racked up tens of millions of plays, with <b>COP KILLAZ</b> (Vol. 5) and <b>$werve — CITY LIGHT$</b> following close behind.</p>
+      <p>The group built melodies out of percussion: 808 cowbells mapped across different pitches, with long-decay 808 kicks tuned into basslines. Records were made on inexpensive drum machines, samplers and cassette recorders.</p>
+      <p>They released first on SoundCloud and VK before reaching streaming platforms. The best-known tracks are <b>JOEHDAH — "Smoke"</b> (Vol. 1), <b>JOEHDAH — COP KILLAZ</b> (Vol. 5) and <b>$werve — CITY LIGHT$</b>.</p>
     </div>
 
     <div class="sec-head"><span class="num">[ 02 ]</span><h2>The Roster</h2></div>
     <div class="prose">
-      <p>Founded by <span class="tag-name">pilgrim</span> (a.k.a. <span class="tag-name">Grimane</span>), the original lineup ran eight deep:
-      <b>C4</b>, <b>JOEHDAH</b>, <b>Joetor 6</b> (later Remymane), <b>G Pimpin</b> (DOM1N1C), <b>SilvaroundS</b>, <b>DIRSA</b>, <b>PUMPMANE</b> and <b>UZIMANE</b>. Over four years the wider roster swelled past thirty affiliated producers and DJs before the collective wound down.</p>
+      <p>Founded by <span class="tag-name">pilgrim</span> (a.k.a. <span class="tag-name">Grimane</span>). The original lineup was
+      <b>C4</b>, <b>JOEHDAH</b>, <b>Joetor 6</b> (later Remymane), <b>G Pimpin</b> (DOM1N1C), <b>SilvaroundS</b>, <b>DIRSA</b>, <b>PUMPMANE</b> and <b>UZIMANE</b>. The wider roster grew to more than thirty affiliated producers and DJs before the collective disbanded.</p>
     </div>
 
     <p class="lede" style="margin-top:30px">Head to <a href="#" data-jump="history">History</a> for the full release-and-roster timeline, or <a href="#" data-jump="archive">Archive</a> for the tape downloads.</p>
@@ -354,7 +334,7 @@
   <!-- ============ ARCHIVE ============ -->
   <section class="panel" id="archive">
     <div class="sec-head" style="margin-top:50px"><span class="num">[ VAULT ]</span><h2>Archive</h2></div>
-    <p class="lede">The tapes outlived the group. After the original archive was copyright-struck off Discord, a second effort rebuilt the catalog and keeps it online today.</p>
+    <p class="lede">After the first community archive was copyright-struck and removed, a second project rebuilt the catalog and maintains it today.</p>
 
     <div class="board">
       <div class="board-top">
@@ -371,7 +351,7 @@
       </div>
     </div>
 
-    <div class="note"><b>Heads up:</b> download buttons below are placeholders — swap in the real mirror URLs. The first archive was copyright-struck and taken down, so 2.0 favors mirrored copies. Official streams live on Spotify, SoundCloud and Apple Music.</div>
+    <div class="note"><b>Note:</b> the download links below are placeholders — replace them with the real mirror URLs. Official streams remain on Spotify, SoundCloud and Apple Music.</div>
 
     <div class="sec-head" style="margin-top:40px"><span class="num">[ DL ]</span><h2>Tape Vault</h2></div>
     <div class="tapes" id="tapes-root"></div>
@@ -404,37 +384,37 @@
     {year:'2020', kind:'gain', date:'Oct 12, 2020', title:'Collective Founded',
      body:'pilgrim (a.k.a. Grimane) starts Cowbell Cult. Original lineup: C4, JOEHDAH, Joetor 6 (Remymane?), G Pimpin (DOM1N1C), SilvaroundS, DIRSA, PUMPMANE and UZIMANE.'},
     {year:'2020', kind:'release', date:'Oct 23, 2020', title:'Vol. 1',
-     body:'The debut tape. Home to JOEHDAH — "Smoke," the breakout that would pull in tens of millions of plays.'},
+     body:'The debut tape, including JOEHDAH — "Smoke," the group\u2019s most-played track.'},
     {year:'2020', kind:'release', date:'Oct 30, 2020', title:'Vol. 2',
-     body:'A week later, the second volume lands.'},
+     body:'The second volume, a week after the first.'},
     {year:'2020', kind:'release', date:'Oct 31, 2020', title:'Forbidden Tape',
-     body:'A Halloween drop slotted between the numbered volumes.'},
+     body:'A side release on Halloween, between the numbered volumes.'},
     {year:'2020', kind:'release', date:'Nov 8, 2020', title:'Memphis Revival', struck:'Pulled Nov 24',
-     body:'A full-length leaning hard into the Memphis sound. Taken down two weeks after release.'},
+     body:'A full-length in the Memphis style. Taken down about two weeks after release.'},
     {year:'2020', kind:'release', date:'Nov 20, 2020', title:'Vol. 3 (old)', struck:'Pulled Nov 24',
-     body:'An early third volume, later scrapped — taken down the same day as Memphis Revival and superseded by the 2021 re-release.'},
+     body:'An early third volume, taken down the same day as Memphis Revival and later replaced by the 2021 version.'},
     {year:'2020', kind:'loss', date:'Nov 24, 2020', title:'First Takedowns',
-     body:'Memphis Revival and the original Vol. 3 are both pulled, the earliest sign of the copyright pressure that would follow the group.'},
+     body:'Memphis Revival and the original Vol. 3 are both pulled — the first copyright takedowns affecting the catalog.'},
 
     {year:'2021', kind:'release', date:'Jan 20–23, 2021', title:'Vol. 3',
-     body:'The definitive third volume arrives (sources split between Jan 20th and Jan 23rd).'},
+     body:'The third volume is re-released. Sources differ between Jan 20th and Jan 23rd.'},
     {year:'2021', kind:'gain', date:'Early 2021', title:'$werve Affiliates',
-     body:'Producer $werve links with the collective. His CITY LIGHT$ goes viral and becomes one of the project\u2019s signature tracks.'},
+     body:'Producer $werve becomes affiliated with the collective. CITY LIGHT$ is among the group\u2019s best-known tracks.'},
     {year:'2021', kind:'release', date:'Apr 17, 2021', title:'Vol. 4',
-     body:'The fourth volume widens the roster of contributing producers.'},
+     body:'The fourth volume.'},
     {year:'2021', kind:'release', date:'Nov 6, 2021', title:'Vol. 5',
-     body:'Carries JOEHDAH — COP KILLAZ, another of the collective\u2019s most-played cuts.'},
+     body:'Includes JOEHDAH — COP KILLAZ, one of the group\u2019s most-played tracks.'},
 
     {year:'2022', kind:'release', date:'Jun 19, 2022', title:'Vol. 6',
-     body:'The sixth volume — the catalog is now deep enough to define the drift-phonk lane.'},
+     body:'The sixth volume.'},
 
     {year:'2023', kind:'release', date:'Oct 31, 2023', title:'Vol. 7',
-     body:'A return to the Halloween release tradition with the seventh volume.'},
+     body:'The seventh volume, released on Halloween.'},
 
     {year:'2024', kind:'release', date:'Aug 9, 2024', title:'Yo Turn (single)', struck:'Later removed',
-     body:'A single with Always Proper, Remymane and camo mane — and the last release before the end. Pulled at an unknown date.'},
+     body:'A single with Always Proper, Remymane and camo mane. The final release; pulled at an unknown date.'},
     {year:'2024', kind:'loss', date:'Aug–Sep 2024', title:'Disbanded',
-     body:'A wave of DMCA attacks from Sun City Publishing knocks the catalog offline. After nearly four years, Cowbell Cult disbands.'},
+     body:'A series of DMCA takedowns from Sun City Publishing removes much of the catalog. Cowbell Cult disbands after nearly four years.'},
   ];
 
   const root = document.getElementById('timeline-root');
