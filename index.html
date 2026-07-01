@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>COWBELL CULT — Archive</title>
+<title>Cowbell Cult Archive</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Barlow+Semi+Condensed:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -78,7 +78,8 @@
   }
   .brand{display:flex;align-items:center;gap:11px;min-width:0}
   .bell{
-    width:26px;height:26px;flex:0 0 auto;filter:drop-shadow(0 0 6px rgba(127,169,255,.35));
+    width:26px;height:26px;flex:0 0 auto;object-fit:contain;display:block;
+    filter:drop-shadow(0 0 6px rgba(127,169,255,.35));
   }
   .brand b{
     font-family:"Cinzel",serif;font-size:19px;letter-spacing:.06em;font-weight:700;
@@ -279,11 +280,7 @@
 <header>
   <div class="bar">
     <div class="brand">
-      <svg class="bell" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <path d="M12 3c-3.2 0-5 2.4-5 6 0 3-1 5-2 6.5h14C18 14 17 12 17 9c0-3.6-1.8-6-5-6Z" stroke="#7fa9ff" stroke-width="1.4" stroke-linejoin="round"/>
-        <path d="M10 18.5a2 2 0 0 0 4 0" stroke="#aab4c4" stroke-width="1.4" stroke-linecap="round"/>
-        <path d="M12 3V1.6" stroke="#7fa9ff" stroke-width="1.4" stroke-linecap="round"/>
-      </svg>
+      <img class="bell" src="assets2/cowbell.png" alt="Cowbell Cult logo">
       <b>Cowbell Cult</b>
     </div>
     <nav>
@@ -299,22 +296,10 @@
   <!-- ============ OVERVIEW ============ -->
   <section class="panel active" id="overview">
     <div class="hero">
-      <h1 class="plate chrome-text">Cowbell<br>Cult</h1>
-      <p class="sub">A phonk collective formed online in 2020, built around pitched 808 cowbells and a steady run of volume tapes in the Memphis phonk tradition.</p>
-      <div class="meta">
-        <span class="chip">Phonk Collective</span>
-        <span class="chip">Est. <b>Oct 12, 2020</b></span>
-        <span class="chip rec"><span class="dot"></span>Disbanded 2024</span>
-      </div>
+      <h1 class="plate chrome-text">Cowbell<br>Cult<br>Archive</h1>
+      <p class="sub">Archiving Cowbell Cult members' tracks</p>
     </div>
-
-    <div class="sec-head"><span class="num">[ 01 ]</span><h2>The Sound</h2></div>
-    <div class="prose">
-      <p>The group built melodies out of percussion: 808 cowbells mapped across different pitches, with long-decay 808 kicks tuned into basslines. Records were made on inexpensive drum machines, samplers and cassette recorders.</p>
-      <p>They released first on SoundCloud and VK before reaching streaming platforms. The best-known tracks are <b>JOEHDAH — "Smoke"</b> (Vol. 1), <b>JOEHDAH — COP KILLAZ</b> (Vol. 5) and <b>$werve — CITY LIGHT$</b>.</p>
-    </div>
-
-    <div class="sec-head"><span class="num">[ 02 ]</span><h2>The Roster</h2></div>
+    <div class="sec-head"><h2>The Roster</h2></div>
     <div class="prose">
       <p>Founded by <span class="tag-name">pilgrim</span> (a.k.a. <span class="tag-name">Grimane</span>). The original lineup was
       <b>C4</b>, <b>JOEHDAH</b>, <b>Joetor 6</b> (later Remymane), <b>G Pimpin</b> (DOM1N1C), <b>SilvaroundS</b>, <b>DIRSA</b>, <b>PUMPMANE</b> and <b>UZIMANE</b>. The wider roster grew to more than thirty affiliated producers and DJs before the collective disbanded.</p>
@@ -325,15 +310,14 @@
 
   <!-- ============ HISTORY ============ -->
   <section class="panel" id="history">
-    <div class="sec-head" style="margin-top:50px"><span class="num">[ LOG ]</span><h2>History</h2></div>
-    <p class="lede">Every release and roster change on record, from the founding in October 2020 to the DMCA takedowns that ended the run in late 2024. <span class="mono" style="color:var(--chrome)">Blue = roster gain · Chrome = release · Rust = loss / takedown.</span></p>
-
+    <div class="sec-head" style="margin-top:50px"><h2>History</h2></div>
+    <p class="lede">Every release and roster change on record, from the founding in October 2020 to the DMCA takedowns that ended the run in late 2024.</p>
     <div id="timeline-root"></div>
   </section>
 
   <!-- ============ ARCHIVE ============ -->
   <section class="panel" id="archive">
-    <div class="sec-head" style="margin-top:50px"><span class="num">[ VAULT ]</span><h2>Archive</h2></div>
+    <div class="sec-head" style="margin-top:50px"><h2>Archive</h2></div>
     <p class="lede">After the first community archive was copyright-struck and removed, a second project rebuilt the catalog and maintains it today.</p>
 
     <div class="board">
@@ -342,12 +326,8 @@
         <span class="online"><span class="dot"></span>ONLINE</span>
       </div>
       <div class="grid-info">
-        <div class="info"><div class="k">Status</div><div class="v"><b>Operational</b> — actively maintained</div></div>
         <div class="info"><div class="k">Online Since</div><div class="v">2025.01.22</div></div>
-        <div class="info"><div class="k">Founded By</div><div class="v">1gk1 · OmniTerrorist · BANKFriteraN</div></div>
         <div class="info"><div class="k">Curated By</div><div class="v"><b>V1NZYMXNE</b> · <b>BANKFriteraN</b></div></div>
-        <div class="info"><div class="k">Coverage</div><div class="v">Vol. 1–7 + side tapes & singles</div></div>
-        <div class="info"><div class="k">Predecessor</div><div class="v">"CowbellCultArchive" (struck &amp; removed)</div></div>
       </div>
     </div>
 
