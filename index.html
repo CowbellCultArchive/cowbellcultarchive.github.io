@@ -300,13 +300,13 @@
       <p class="sub">Archiving Cowbell Cult members' tracks</p>
     </div>
 
-    <p class="lede" style="margin-top:30px">Head to <a href="#" data-jump="history">History</a> for the full release-and-roster timeline, or <a href="#" data-jump="archive">Archive</a> for the tape downloads.</p>
+    <p class="lede" style="margin-top:30px">Head to <a href="#" data-jump="history">History</a> for the full release and member timeline, or <a href="#" data-jump="archive">Archive</a> for the tape downloads.</p>
   </section>
 
   <!-- ============ HISTORY ============ -->
   <section class="panel" id="history">
     <div class="sec-head" style="margin-top:50px"><h2>History</h2></div>
-    <p class="lede">Every release and roster change on record, from the founding in October 2020 to the DMCA takedowns that ended the run in late 2024.</p>
+    <p class="lede">Every release and member change on record, from the founding in October 2020 to the DMCA takedowns that ended the run in late 2024.</p>
     <div id="timeline-root"></div>
   </section>
 
@@ -325,10 +325,7 @@
         <div class="info"><div class="k">Curated By</div><div class="v"><b>V1NZYMXNE</b> · <b>BANKFriteraN</b></div></div>
       </div>
     </div>
-
-    <div class="note"><b>Note:</b> the download links below are placeholders — replace them with the real mirror URLs. Official streams remain on Spotify, SoundCloud and Apple Music.</div>
-
-    <div class="sec-head" style="margin-top:40px"><span class="num">[ DL ]</span><h2>Tape Vault</h2></div>
+    <div class="sec-head" style="margin-top:40px"><h2>Tape Vault</h2></div>
     <div class="tapes" id="tapes-root"></div>
   </section>
 
@@ -422,17 +419,17 @@
 
   /* ---------- archive / tape data ---------- */
   const TAPES = [
-    {t:'Vol. 1', d:'Oct 23, 2020', feat:'incl. JOEHDAH — "Smoke"', fmt:'MP3 320'},
+    {t:'Vol. 1', d:'Oct 23, 2020', feat:'The first volume.', fmt:'MP3 320'},
     {t:'Vol. 2', d:'Oct 30, 2020', feat:'', fmt:'MP3 320'},
-    {t:'Forbidden Tape', d:'Oct 31, 2020', feat:'side release', fmt:'MP3 320'},
-    {t:'Memphis Revival', d:'Nov 8, 2020', feat:'archived copy — original pulled', fmt:'MP3 320', ghost:true},
-    {t:'Vol. 3 (old)', d:'Nov 20, 2020', feat:'archived copy — scrapped version', fmt:'MP3 320', ghost:true},
+    {t:'Forbidden Tape', d:'Oct 31, 2020', feat:'', fmt:'MP3 320'},
+    {t:'Memphis Revival', d:'Nov 8, 2020', feat:'', fmt:'MP3 320', ghost:true},
+    {t:'Vol. 3 (old)', d:'Nov 20, 2020', feat:'', fmt:'MP3 320', ghost:true},
     {t:'Vol. 3', d:'Jan 2021', feat:'', fmt:'MP3 320'},
     {t:'Vol. 4', d:'Apr 17, 2021', feat:'', fmt:'MP3 320'},
-    {t:'Vol. 5', d:'Nov 6, 2021', feat:'incl. JOEHDAH — COP KILLAZ', fmt:'MP3 320'},
+    {t:'Vol. 5', d:'Nov 6, 2021', feat:'', fmt:'MP3 320'},
     {t:'Vol. 6', d:'Jun 19, 2022', feat:'', fmt:'MP3 320'},
     {t:'Vol. 7', d:'Oct 31, 2023', feat:'', fmt:'MP3 320'},
-    {t:'Yo Turn (single)', d:'Aug 9, 2024', feat:'w/ Always Proper, Remymane, camo mane', fmt:'MP3 320', ghost:true},
+    {t:'Yo Turn (single)', d:'Aug 9, 2024', feat:'w/ Always Proper, feat. Remymane & camo mane', fmt:'MP3 320', ghost:true},
   ];
   const tapesRoot = document.getElementById('tapes-root');
   TAPES.forEach(x=>{
