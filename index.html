@@ -235,7 +235,7 @@
   .tape .left .d{font-family:"Space Mono",monospace;font-size:12px;color:var(--chrome-lo);margin-top:3px}
   .tape .left .feat{color:var(--ink-dim);font-size:13.5px;margin-top:5px}
   .tape .right{display:flex;align-items:center;gap:10px}
-  .fmt{font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.1em;color:var(--chrome-lo);border:1px solid var(--steel);border-radius:3px;padding:3px 7px}
+  .fmt{font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.1em;color:var(--chrome-lo);border:1px solid var(--steel);border-radius:3px;padding:3px 7px;white-space:nowrap}
   .dl{
     font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;
     color:var(--void);font-weight:700;
@@ -419,17 +419,17 @@
   /* ---------- archive / tape data ---------- */
   const ART = 'assets2/';
   const TAPES = [
-    {t:'Vol. 1', d:'Oct 23, 2020', feat:'The first volume.', fmt:'MP3 320', img:'vol1.png'},
-    {t:'Vol. 2', d:'Oct 30, 2020', feat:'', fmt:'MP3 320', img:'vol2.png'},
-    {t:'Forbidden Tape', d:'Oct 31, 2020', feat:'', fmt:'MP3 320', img:'forbidden-tape.png'},
-    {t:'Memphis Revival', d:'Nov 8, 2020', feat:'', fmt:'MP3 320', img:'memphis-revival.png'},
-    {t:'Vol. 3 (old)', d:'Nov 20, 2020', feat:'', fmt:'MP3 320', img:'vol3-old.png'},
-    {t:'Vol. 3', d:'Jan 2021', feat:'', fmt:'MP3 320', img:'vol3.png'},
-    {t:'Vol. 4', d:'Apr 17, 2021', feat:'', fmt:'MP3 320', img:'vol4.png'},
-    {t:'Vol. 5', d:'Nov 6, 2021', feat:'', fmt:'MP3 320', img:'vol5.png'},
-    {t:'Vol. 6', d:'Jun 19, 2022', feat:'', fmt:'MP3 320', img:'vol6.png'},
-    {t:'Vol. 7', d:'Oct 31, 2023', feat:'', fmt:'MP3 320', img:'vol7.png'},
-    {t:'Yo Turn (single)', d:'Aug 9, 2024', feat:'w/ Always Proper, feat. Remymane & camo mane', fmt:'MP3 320', img:'yo-turn.png'},
+    {t:'Vol. 1', d:'Oct 23, 2020', feat:'The first volume.', fmt:'Sound quality placeholder', img:'vol1.png'},
+    {t:'Vol. 2', d:'Oct 30, 2020', feat:'', fmt:'Sound quality placeholder', img:'vol2.png'},
+    {t:'Forbidden Tape', d:'Oct 31, 2020', feat:'', fmt:'Sound quality placeholder', img:'forbidden-tape.png'},
+    {t:'Memphis Revival', d:'Nov 8, 2020', feat:'', fmt:'Sound quality placeholder', img:'memphis-revival.png'},
+    {t:'Vol. 3 (old)', d:'Nov 20, 2020', feat:'', fmt:'Sound quality placeholder', img:'vol3-old.png'},
+    {t:'Vol. 3', d:'Jan 2021', feat:'', fmt:'Sound quality placeholder', img:'vol3.png'},
+    {t:'Vol. 4', d:'Apr 17, 2021', feat:'', fmt:'Sound quality placeholder', img:'vol4.png'},
+    {t:'Vol. 5', d:'Nov 6, 2021', feat:'', fmt:'Sound quality placeholder', img:'vol5.png'},
+    {t:'Vol. 6', d:'Jun 19, 2022', feat:'', fmt:'Sound quality placeholder', img:'vol6.png'},
+    {t:'Vol. 7', d:'Oct 31, 2023', feat:'', fmt:'Sound quality placeholder', img:'vol7.png'},
+    {t:'Yo Turn (single)', d:'Aug 9, 2024', feat:'w/ Always Proper, feat. Remymane & camo mane', fmt:'Sound quality placeholder', img:'yo-turn.png'},
   ];
   const tapesRoot = document.getElementById('tapes-root');
   TAPES.forEach(x=>{
