@@ -214,19 +214,22 @@
     transition:.22s;position:relative;
   }
   .tape:hover{border-color:var(--steel-2);box-shadow:0 10px 30px rgba(0,0,0,.45),0 0 0 1px rgba(127,169,255,.08);transform:translateY(-2px)}
-  .tape .reels{
-    flex:0 0 116px;display:flex;align-items:center;justify-content:center;gap:14px;
-    background:radial-gradient(120px 80px at 50% 40%,#1a2c49,#0c1424);
-    border-right:1px solid var(--steel);position:relative;
+  .tape .cover{
+    flex:0 0 104px;width:104px;align-self:stretch;
+    display:block;position:relative;border-right:1px solid var(--steel);
+    background:linear-gradient(180deg,#16243c,#0c1424);
+    overflow:hidden;
   }
-  .reel{
-    width:34px;height:34px;border-radius:50%;
-    background:radial-gradient(circle at 50% 50%,#2b3c5b 0 30%,#0c1626 33% 100%);
-    border:2px solid var(--steel-2);position:relative;
+  .tape .cover img{
+    width:100%;height:100%;min-height:104px;object-fit:cover;display:block;
+    filter:saturate(.9) contrast(1.03);transition:.25s;
   }
-  .reel::before{content:"";position:absolute;inset:11px;border-radius:50%;border:2px dashed var(--chrome-lo);opacity:.7}
-  .tape:hover .reel::before{animation:spin 1.6s linear infinite}
-  @keyframes spin{to{transform:rotate(360deg)}}
+  .tape:hover .cover img{filter:saturate(1.05) contrast(1.08);transform:scale(1.04)}
+  .tape .cover::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background:linear-gradient(120deg, rgba(127,169,255,.10), transparent 45%);
+    box-shadow:inset 0 0 30px rgba(0,0,0,.45);
+  }
   .tape .body{flex:1;padding:15px 18px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
   .tape .left .t{font-size:19px;font-weight:700;color:var(--chrome-hi);letter-spacing:.01em}
   .tape .left .d{font-family:"Space Mono",monospace;font-size:12px;color:var(--chrome-lo);margin-top:3px}
@@ -241,11 +244,6 @@
     box-shadow:inset 0 1px 0 rgba(255,255,255,.7);transition:.16s;white-space:nowrap;
   }
   .dl:hover{background:linear-gradient(180deg,#fff,#bcc7d8);box-shadow:inset 0 1px 0 rgba(255,255,255,.9),0 0 18px rgba(127,169,255,.4)}
-  .dl.ghost{
-    background:transparent;color:var(--rust);border:1px solid var(--rust-dim);box-shadow:none;
-  }
-  .dl.ghost:hover{background:rgba(200,114,72,.1);box-shadow:none}
-  .tape.pending{opacity:.62}
 
   footer{
     max-width:1080px;margin:0 auto;padding:30px 22px 60px;border-top:1px solid var(--steel);
@@ -264,7 +262,8 @@
     .grid-info{grid-template-columns:1fr}
     .info{border-right:none}
     .tape{flex-direction:column}
-    .tape .reels{flex-basis:auto;padding:14px 0;border-right:none;border-bottom:1px solid var(--steel)}
+    .tape .cover{flex-basis:auto;width:100%;border-right:none;border-bottom:1px solid var(--steel)}
+    .tape .cover img{min-height:0;aspect-ratio:1/1;max-height:280px}
     .tape .body{justify-content:flex-start}
     .tape .right{width:100%;justify-content:space-between}
   }
@@ -418,25 +417,26 @@
   function revealTimeline(){ document.querySelectorAll('.tl-item:not(.in)').forEach(el=>io.observe(el)); }
 
   /* ---------- archive / tape data ---------- */
+  const ART = 'assets2/';
   const TAPES = [
-    {t:'Vol. 1', d:'Oct 23, 2020', feat:'The first volume.', fmt:'MP3 320'},
-    {t:'Vol. 2', d:'Oct 30, 2020', feat:'', fmt:'MP3 320'},
-    {t:'Forbidden Tape', d:'Oct 31, 2020', feat:'', fmt:'MP3 320'},
-    {t:'Memphis Revival', d:'Nov 8, 2020', feat:'', fmt:'MP3 320', ghost:true},
-    {t:'Vol. 3 (old)', d:'Nov 20, 2020', feat:'', fmt:'MP3 320', ghost:true},
-    {t:'Vol. 3', d:'Jan 2021', feat:'', fmt:'MP3 320'},
-    {t:'Vol. 4', d:'Apr 17, 2021', feat:'', fmt:'MP3 320'},
-    {t:'Vol. 5', d:'Nov 6, 2021', feat:'', fmt:'MP3 320'},
-    {t:'Vol. 6', d:'Jun 19, 2022', feat:'', fmt:'MP3 320'},
-    {t:'Vol. 7', d:'Oct 31, 2023', feat:'', fmt:'MP3 320'},
-    {t:'Yo Turn (single)', d:'Aug 9, 2024', feat:'w/ Always Proper, feat. Remymane & camo mane', fmt:'MP3 320', ghost:true},
+    {t:'Vol. 1', d:'Oct 23, 2020', feat:'The first volume.', fmt:'MP3 320', img:'vol1.png'},
+    {t:'Vol. 2', d:'Oct 30, 2020', feat:'', fmt:'MP3 320', img:'vol2.png'},
+    {t:'Forbidden Tape', d:'Oct 31, 2020', feat:'', fmt:'MP3 320', img:'forbidden-tape.png'},
+    {t:'Memphis Revival', d:'Nov 8, 2020', feat:'', fmt:'MP3 320', img:'memphis-revival.png'},
+    {t:'Vol. 3 (old)', d:'Nov 20, 2020', feat:'', fmt:'MP3 320', img:'vol3-old.png'},
+    {t:'Vol. 3', d:'Jan 2021', feat:'', fmt:'MP3 320', img:'vol3.png'},
+    {t:'Vol. 4', d:'Apr 17, 2021', feat:'', fmt:'MP3 320', img:'vol4.png'},
+    {t:'Vol. 5', d:'Nov 6, 2021', feat:'', fmt:'MP3 320', img:'vol5.png'},
+    {t:'Vol. 6', d:'Jun 19, 2022', feat:'', fmt:'MP3 320', img:'vol6.png'},
+    {t:'Vol. 7', d:'Oct 31, 2023', feat:'', fmt:'MP3 320', img:'vol7.png'},
+    {t:'Yo Turn (single)', d:'Aug 9, 2024', feat:'w/ Always Proper, feat. Remymane & camo mane', fmt:'MP3 320', img:'yo-turn.png'},
   ];
   const tapesRoot = document.getElementById('tapes-root');
   TAPES.forEach(x=>{
     const el=document.createElement('div');
     el.className='tape';
     el.innerHTML =
-      '<div class="reels"><span class="reel"></span><span class="reel"></span></div>'+
+      '<div class="cover"><img src="'+ART+x.img+'" alt="'+x.t+' cover art" loading="lazy"></div>'+
       '<div class="body">'+
         '<div class="left">'+
           '<div class="t">'+x.t+'</div>'+
@@ -445,7 +445,7 @@
         '</div>'+
         '<div class="right">'+
           '<span class="fmt">'+x.fmt+'</span>'+
-          '<a class="dl'+(x.ghost?' ghost':'')+'" href="#" onclick="return false">'+(x.ghost?'Archived':'Download')+'</a>'+
+          '<a class="dl" href="#" onclick="return false">Download</a>'+
         '</div>'+
       '</div>';
     tapesRoot.appendChild(el);
