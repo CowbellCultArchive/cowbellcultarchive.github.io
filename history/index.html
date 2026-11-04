@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>History — Cowbell Cult Archive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Barlow+Semi+Condensed:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <div class="brand">
+      <img class="bell" src="/assets2/cowbell2.png" alt="Cowbell Cult logo">
+      <b>Cowbell Cult Archive</b>
+    </div>
+    <nav>
+      <a class="tab" href="/overview/">Overview</a>
+      <a class="tab active" href="/history/">History</a>
+      <a class="tab" href="/archive/">Archive</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="sec-head" style="margin-top:50px"><h2>History</h2></div>
+  <p class="lede">Every release and member change on record, from the founding in October 2020 to the DMCA takedowns that ended the run in late 2024.</p>
+  <div id="timeline-root"></div>
+</main>
+
+<footer>
+  <div class="mono">COWBELL CULT // FAN ARCHIVE</div>
+  <p style="margin:10px 0 0;max-width:680px">An unofficial tribute and archive. Not affiliated with the collective or any label. All tracks belong to their creators.</p>
+</footer>
+
+<script>
+  const TL = [
+    {year:'2020', kind:'gain', date:'Oct 12, 2020', title:'Collective Founded',
+     body:'pilgrim (a.k.a. Grimane) starts Cowbell Cult. Original lineup: C4, JOEHDAH, Joetor 6, G Pimpin (DOM1N1C), SilvaroundS, DIRSA, PUMPMANE and UZIMANE.'},
+    {year:'2020', kind:'release', date:'Oct 23, 2020', title:'Vol. 1',
+     body:'The debut tape, including JOEHDAH — "Smoke," the group’s most-played track.'},
+    {year:'2020', kind:'release', date:'Oct 30, 2020', title:'Vol. 2',
+     body:'The second volume, a week after the first.'},
+    {year:'2020', kind:'release', date:'Oct 31, 2020', title:'Forbidden Tape',
+     body:'A side release on Halloween, between the numbered volumes.'},
+    {year:'2020', kind:'release', date:'Nov 8, 2020', title:'Memphis Revival', struck:'Pulled Nov 24',
+     body:'A full-length in the Memphis style. Taken down about two weeks after release.'},
+    {year:'2020', kind:'release', date:'Nov 20, 2020', title:'Vol. 3 (old)', struck:'Pulled Nov 24',
+     body:'An early third volume, taken down the same day as Memphis Revival and later replaced by the 2021 version.'},
+    {year:'2020', kind:'loss', date:'Nov 24, 2020', title:'First Takedowns',
+     body:'Memphis Revival and the original Vol. 3 are both pulled — the first copyright takedowns affecting the catalog.'},
+
+    {year:'2021', kind:'release', date:'Jan 20–23, 2021', title:'Vol. 3',
+     body:'The third volume is re-released. Sources differ between Jan 20th and Jan 23rd.'},
+    {year:'2021', kind:'gain', date:'Early 2021', title:'$werve Affiliates',
+     body:'Producer $werve becomes affiliated with the collective. CITY LIGHT$ is among the group’s best-known tracks.'},
+    {year:'2021', kind:'release', date:'Apr 17, 2021', title:'Vol. 4',
+     body:'The fourth volume.'},
+    {year:'2021', kind:'release', date:'Nov 6, 2021', title:'Vol. 5',
+     body:'Includes JOEHDAH — COP KILLAZ, one of the group’s most-played tracks.'},
+
+    {year:'2022', kind:'release', date:'Jun 19, 2022', title:'Vol. 6',
+     body:'The sixth volume.'},
+
+    {year:'2023', kind:'release', date:'Oct 31, 2023', title:'Vol. 7',
+     body:'The seventh volume, released on Halloween.'},
+
+    {year:'2024', kind:'release', date:'Aug 9, 2024', title:'Yo Turn (single)', struck:'Later removed',
+     body:'A single with Always Proper, Remymane and camo mane. The final release; pulled at an unknown date.'},
+    {year:'2024', kind:'loss', date:'Aug–Sep 2024', title:'Disbanded',
+     body:'A series of DMCA takedowns from Sun City Publishing removes much of the catalog. Cowbell Cult disbands after nearly four years.'},
+  ];
+
+  const root = document.getElementById('timeline-root');
+  let lastYear = null;
+  TL.forEach(e=>{
+    if(e.year!==lastYear){
+      const yb=document.createElement('div');
+      yb.className='year-band';yb.textContent=e.year;
+      root.appendChild(yb);
+      const tl=document.createElement('div');tl.className='timeline';tl.dataset.year=e.year;
+      root.appendChild(tl);
+      lastYear=e.year;
+    }
+    const tl=root.querySelector('.timeline[data-year="'+e.year+'"]');
+    const item=document.createElement('div');
+    item.className='tl-item k-'+e.kind;
+    const label = e.kind==='release'?'Release':(e.kind==='gain'?'Roster +':'Loss');
+    item.innerHTML =
+      '<div class="tl-head"><span class="kind">'+label+'</span><span class="tl-date">'+e.date+'</span></div>'+
+      '<div class="tl-title">'+e.title+(e.struck?'<span class="struck">'+e.struck+'</span>':'')+'</div>'+
+      '<div class="tl-body">'+e.body+'</div>';
+    tl.appendChild(item);
+  });
+</script>
+</body>
+</html>
