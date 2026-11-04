@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Archive — Cowbell Cult Archive</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800;900&family=Barlow+Semi+Condensed:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<header>
+  <div class="bar">
+    <div class="brand">
+      <img class="bell" src="/assets2/cowbell2.png" alt="Cowbell Cult logo">
+      <b>Cowbell Cult Archive</b>
+    </div>
+    <nav>
+      <a class="tab" href="/overview/">Overview</a>
+      <a class="tab" href="/history/">History</a>
+      <a class="tab active" href="/archive/">Archive</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <div class="sec-head" style="margin-top:50px"><h2>Archive</h2></div>
+  <p class="lede">After the first community archive was copyright-struck and removed, a second project rebuilt the catalog and maintains it today.</p>
+
+  <div class="board">
+    <div class="board-top">
+      <span class="name">Cowbell Cult Archive 2.0</span>
+      <span class="online"><span class="dot"></span>ONLINE</span>
+    </div>
+    <div class="grid-info">
+      <div class="info"><div class="k">Online Since</div><div class="v">2025.01.22</div></div>
+      <div class="info"><div class="k">Curated By</div><div class="v"><b>V1NZYMXNE</b> · <b>BANKFriteraN</b></div></div>
+    </div>
+  </div>
+
+  <div class="sec-head" style="margin-top:40px"><h2>Tape Vault</h2></div>
+  <div class="tapes" id="tapes-root"></div>
+
+  <div class="sec-head" style="margin-top:48px">
+    <h2>Member Tapes</h2>
+    <span class="sub-note">By members · released through Cowbell Cult</span>
+  </div>
+  <p class="lede">Solo and side tapes made by individual members, but put out under the Cowbell Cult name.</p>
+  <div class="tapes" id="member-root"></div>
+</main>
+
+<footer>
+  <div class="mono">COWBELL CULT // FAN ARCHIVE</div>
+  <p style="margin:10px 0 0;max-width:680px">An unofficial tribute and archive. Not affiliated with the collective or any label. All tracks belong to their creators.</p>
+</footer>
+
+<script>
+  /* Main volume vault */
+  const TAPES = [
+    {t:'Vol. 1', d:'Oct 23, 2020', feat:'The first volume.', fmt:'Sound quality placeholder', img:'https://raw.githubusercontent.com/umovoquebrado-svg/cowbellcultarchiveDownload.github.io/main/assets2/vol1.png'},
+    {t:'Vol. 2', d:'Oct 30, 2020', feat:'', fmt:'Sound quality placeholder', img:'https://raw.githubusercontent.com/umovoquebrado-svg/cowbellcultarchiveDownload.github.io/refs/heads/main/assets2/vol2.jpg'},
+    {t:'Forbidden Tape', d:'Oct 31, 2020', feat:'', fmt:'Sound quality placeholder', img:'https://raw.githubusercontent.com/mrpolaroidfreshandclean/Cowbell-Cult-Archive/main/assets2/forbiddentape.png'},
+    {t:'Memphis Revival', d:'Nov 8, 2020', feat:'', fmt:'Sound quality placeholder', img:'/assets2/memphis-revival.png'},
+    {t:'Vol. 3 (old)', d:'Nov 20, 2020', feat:'', fmt:'Sound quality placeholder', img:'/assets2/vol3-old.png'},
+    {t:'Vol. 3', d:'Jan 2021', feat:'', fmt:'Sound quality placeholder', img:'https://raw.githubusercontent.com/umovoquebrado-svg/cowbellcultarchiveDownload.github.io/refs/heads/main/assets2/vol3.png'},
+    {t:'Vol. 4', d:'Apr 17, 2021', feat:'', fmt:'Sound quality placeholder', img:'https://raw.githubusercontent.com/umovoquebrado-svg/cowbellcultarchiveDownload.github.io/refs/heads/main/assets2/vol4.png'},
+    {t:'Vol. 5', d:'Nov 6, 2021', feat:'', fmt:'Sound quality placeholder', img:'https://raw.githubusercontent.com/umovoquebrado-svg/cowbellcultarchiveDownload.github.io/refs/heads/main/assets2/vol5.jpg'},
+    {t:'Vol. 6', d:'Jun 19, 2022', feat:'', fmt:'Sound quality placeholder', img:'https://raw.githubusercontent.com/umovoquebrado-svg/cowbellcultarchiveDownload.github.io/refs/heads/main/assets2/vol6.jpg'},
+    {t:'Vol. 7', d:'Oct 31, 2023', feat:'', fmt:'Sound quality placeholder', img:'https://raw.githubusercontent.com/umovoquebrado-svg/cowbellcultarchiveDownload.github.io/refs/heads/main/assets2/vol7.png'},
+    {t:'Yo Turn (single)', d:'Aug 9, 2024', feat:'w/ Always Proper, feat. Remymane & camo mane', fmt:'Sound quality placeholder', img:'https://raw.githubusercontent.com/mrpolaroidfreshandclean/Cowbell-Cult-Archive/main/assets2/Yo%20Turn.jpg'},
+  ];
+
+  /* Member tapes — made by members, released under Cowbell Cult */
+  const MEMBER_TAPES = [
+    {t:'JDM', d:'', feat:'JOEHDAH', fmt:'Sound quality placeholder', img:'https://raw.githubusercontent.com/mrpolaroidfreshandclean/Cowbell-Cult-Archive/refs/heads/main/assets2/Jdm.jpg'},
+    {t:'UZIPUMP Drumkit', d:'', feat:'UZIMANE — drumkit promo', fmt:'Sound quality placeholder', img:'https://raw.githubusercontent.com/mrpolaroidfreshandclean/Cowbell-Cult-Archive/refs/heads/main/assets2/UZIMANE-UZIPUMP_DRUMKIT_PROMOTION.jpg'},
+  ];
+
+  function render(list, mountId){
+    const mount = document.getElementById(mountId);
+    list.forEach(x=>{
+      const el=document.createElement('div');
+      el.className='tape';
+      el.innerHTML =
+        '<div class="cover"><img src="'+x.img+'" alt="'+x.t+' cover art" loading="lazy"></div>'+
+        '<div class="body">'+
+          '<div class="left">'+
+            '<div class="t">'+x.t+'</div>'+
+            (x.d?'<div class="d">'+x.d+'</div>':'')+
+            (x.feat?'<div class="feat">'+x.feat+'</div>':'')+
+          '</div>'+
+          '<div class="right">'+
+            '<span class="fmt">'+x.fmt+'</span>'+
+            '<a class="dl" href="#" onclick="return false">Download</a>'+
+          '</div>'+
+        '</div>';
+      mount.appendChild(el);
+    });
+  }
+  render(TAPES, 'tapes-root');
+  render(MEMBER_TAPES, 'member-root');
+</script>
+</body>
+</html>
