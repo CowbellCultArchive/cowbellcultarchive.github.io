@@ -1,5 +1,12 @@
-# Go to the ARCHIVE website: [cowbellcultarchive.github.io](https://cowbellcultarchive.github.io/)
-🔴We are fixing this website so its not 100% working
+Welcome to the cowbell cult archive
+# there's 2 archives
+1ARCHIVE website: [cowbellcultarchive.github.io](https://cowbellcultarchive.github.io/)
+
+STATUS = 🔴
+
+2ARCHIVE: https://github.com/polarboy11/Cowbell-Cult-Archive
+
+STATUS = 🟢
 
 LINKS:
  
