@@ -1,4 +1,4 @@
-Welcome to the cowbell cult archive
+WELCOME TO THE COWBELL CULT ARCHIVE
 # there's 2 archives
 1ARCHIVE website: [cowbellcultarchive.github.io](https://cowbellcultarchive.github.io/)
 
