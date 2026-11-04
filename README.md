@@ -1,6 +1,8 @@
 # Go to the ARCHIVE website: [cowbellcultarchive.github.io](https://cowbellcultarchive.github.io/)
 🔴We are fixing this website so its not 100% working
- LINKS:
+
+#LINKS:
+ 
  [Youtube channel](https://www.youtube.com/@cowbellcultarchive3/playlists)
  
  [Phonk.wiki](https://phonk.fandom.com/wiki/Cowbell_Cult)
