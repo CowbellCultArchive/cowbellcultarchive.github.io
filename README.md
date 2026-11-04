@@ -1,8 +1,8 @@
 WELCOME TO THE COWBELL CULT ARCHIVE
 # there's 2 archives
-1ARCHIVE website: [cowbellcultarchive.github.io](https://cowbellcultarchive.github.io/) STATUS = 🔴
+1ARCHIVE: [ORIGINAL ARCHIVE](https://cowbellcultarchive.github.io/) STATUS = 🔴
 
-2ARCHIVE: https://github.com/polarboy11/Cowbell-Cult-Archive STATUS = 🟢
+2ARCHIVE: [POLAROID ARCHIVE](https://github.com/polarboy11/Cowbell-Cult-Archive) STATUS = 🟢
 
 LINKS:
  
