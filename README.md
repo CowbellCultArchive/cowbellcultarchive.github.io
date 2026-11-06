@@ -11,5 +11,7 @@ LINKS:
  [Phonk.wiki](https://phonk.fandom.com/wiki/Cowbell_Cult)
 
 WEBSITE PREVIEW:
-<img width="1351" height="656" alt="image" src="https://github.com/user-attachments/assets/4cc60765-41dd-478f-998f-213ee9c8178e" />
+
+<img width="1366" height="655" alt="image" src="https://github.com/user-attachments/assets/15002d9f-d2dd-47fc-954c-86a2abfcd2eb" />
+
 Archiving the phonk collective Cowbell Cult’s entire discography.
