@@ -73,7 +73,7 @@ main{max-width:1080px;margin:0 auto;padding:0 22px 90px}
 .info .v{margin-top:4px;color:var(--ink);font-size:15px}
 .info .v b{color:var(--chrome-hi)}
 .tapes{display:grid;gap:14px;margin-top:18px}
-.tape{display:flex;align-items:stretch;gap:0;border:1px solid var(--steel);overflow:hidden;background:linear-gradient(180deg,#0f1a2d,#0a1220);transition:border-color .2s;position:relative}
+.tape{display:flex;align-items:stretch;gap:0;border:1px solid var(--steel);overflow:hidden;/* background-image: url("../assets2/vol5.png");*/}
 .tape:hover{border-color:var(--steel-2)}
 .tape .cover{flex:0 0 104px;width:104px;align-self:stretch;display:block;position:relative;border-right:1px solid var(--steel);background:linear-gradient(180deg,#16243c,#0c1424);overflow:hidden}
 .tape .cover img{width:100%;height:100%;min-height:104px;object-fit:cover;display:block}
@@ -84,8 +84,8 @@ main{max-width:1080px;margin:0 auto;padding:0 22px 90px}
 .tape .left .feat{color:var(--ink-dim);font-size:13.5px;margin-top:5px}
 .tape .right{display:flex;align-items:center;gap:10px}
 .fmt{font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.1em;color:var(--chrome-lo);border:1px solid var(--steel);padding:3px 7px;white-space:nowrap}
-.dl{font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--void);font-weight:700;background:linear-gradient(180deg,#dfe6f0,#9aa6b8);border:1px solid #c2ccda;padding:9px 16px;cursor:pointer;box-shadow:inset 0 1px 0 rgba(255,255,255,.7);transition:background .16s;white-space:nowrap}
-.dl:hover{background:linear-gradient(180deg,#fff,#bcc7d8)}
+.dl{font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase; color: #f8f8f8; font-weight:700; background:linear-gradient(180deg,#f8f8f8, #818181);border:1px solid #c2ccda;padding:9px 16px;cursor:pointer;box-shadow:inset 0 1px 0 rgba(255,255,255,.7);transition:background .16s;white-space:nowrap}
+.dl:hover{background:linear-gradient(180deg,#f7f8fc81)}
 .dl.disabled{background:linear-gradient(180deg,#2a3650,#1a2436);color:var(--chrome-lo);border-color:var(--steel);box-shadow:none;cursor:not-allowed}
 footer{max-width:1080px;margin:0 auto;padding:30px 22px 60px;border-top:1px solid var(--steel);color:var(--chrome-lo);font-size:13px}
 footer .mono{font-size:11px;letter-spacing:.1em}
