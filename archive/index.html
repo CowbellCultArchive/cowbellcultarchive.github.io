@@ -84,9 +84,9 @@ main{max-width:1080px;margin:0 auto;padding:0 22px 90px}
 .tape .left .feat{color:var(--ink-dim);font-size:13.5px;margin-top:5px}
 .tape .right{display:flex;align-items:center;gap:10px}
 .fmt{font-family:"Space Mono",monospace;font-size:10px;letter-spacing:.1em;color:var(--chrome-lo);border:1px solid var(--steel);padding:3px 7px;white-space:nowrap}
-.dl{font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase; color: #f8f8f8; font-weight:700; background:linear-gradient(180deg,#f8f8f8, #818181);border:1px solid #c2ccda;padding:9px 16px;cursor:pointer;box-shadow:inset 0 1px 0 rgba(255,255,255,.7);transition:background .16s;white-space:nowrap}
+.dl{font-family:"Space Mono",monospace;font-size:12px;letter-spacing:.1em;text-transform:uppercase; color: #f8f8f8; font-weight:700; background:linear-gradient(180deg,#ff000000, #81818100);border:1px solid #c2ccda;padding:9px 16px;cursor:pointer;box-shadow:inset 0 1px 0 rgba(255,255,255,.7);transition:background .16s;white-space:nowrap}
 .dl:hover{background:linear-gradient(180deg,#f7f8fc81)}
-.dl.disabled{background:linear-gradient(180deg,#2a3650,#1a2436);color:var(--chrome-lo);border-color:var(--steel);box-shadow:none;cursor:not-allowed}
+.dl.disabled{background:linear-gradient(180deg,#2a365000,#1a243600);color:var(--chrome-lo);border-color:var(--steel);box-shadow:none;cursor:not-allowed}
 footer{max-width:1080px;margin:0 auto;padding:30px 22px 60px;border-top:1px solid var(--steel);color:var(--chrome-lo);font-size:13px}
 footer .mono{font-size:11px;letter-spacing:.1em}
 footer a{color:var(--chrome)}
@@ -108,15 +108,16 @@ footer a{color:var(--chrome)}
 </style>
 </head>
 <body>
-<p style=" position: fixed; top: 20px; left: 210px; z-index: 20; color: #aab4c4;">by:</p>
-<p style=" position: fixed; top: 20px; left: 315px; z-index: 20; color: #ffae00;">BANKFriteraN,</p>
-<p style=" position: fixed; top: 20px; left: 233px; z-index: 20; color: #00c3ff;">V1NZYMXNE</p>
-<p style=" position: fixed; top: 20px; left: 415px; z-index: 20; color: #6395ff;">Polaroid</p>
+
 <header>
   <div class="bar">
     <div class="brand">
       <img class="bell" src="../assets2/cowbell2.png" alt="Cowbell Cult logo">
       <b>Cowbell Cult Archive</b>
+      <p style=" position: fixed; top: 20px; margin-left: 50px; z-index: 20; color: #aab4c4;">by:</p>
+      <p style=" position: fixed; top: 20px; margin-left: 75px; z-index: 20; color: #ffae00;">BANKFriteraN,</p>
+      <p style=" position: fixed; top: 20px; margin-left: 175px; z-index: 20; color: #00c3ff;">V1NZYMXNE,</p>
+      <p style=" position: fixed; top: 20px; margin-left: 265px; z-index: 20; color: #6395ff;">Polaroid</p>
     </div>
     <nav>
       <a class="tab" href="../overview/">About us</a>
@@ -130,7 +131,7 @@ footer a{color:var(--chrome)}
   <div class="tapes" id="tapes-root"></div>
   <div class="sec-head" style="margin-top:48px">
     <h2>Deleted songs or lost parts</h2>
-    <span class="sub-note">By members or released through Cowbell Cult</span>
+    <span class="sub-note">Songs by members that were deleted or released through Cowbell Cult that wered deleted x</span>
   </div>
   <p class="lede">Solo and side tapes made by individual members, but put out under the Cowbell Cult name.</p>
   <div class="tapes" id="member-root"></div>
@@ -154,11 +155,14 @@ footer a{color:var(--chrome)}
     {t:'Vol. 4', d:'Apr 17, 2021', feat:'', img:'../assets2/vol4.png', dl:'https://drive.google.com/drive/folders/1_ykUhoU1Id_vQ4GJuC25J8D6NEs8GJmP?usp=drive_link'},
     {t:'Vol. 5', d:'Nov 6, 2021', feat:'',  img:'../assets2/vol5.jpg', dl:'https://drive.google.com/drive/folders/1e3TFwzSl_cXioutScLxgYjwvaGg7RRNZ?usp=drive_link'},
     {t:'Vol. 6', d:'Jun 19, 2022', feat:'', img:'../assets2/vol6.jpg', dl:'https://drive.google.com/drive/folders/18CB3SvUVexW9hSkP4Yu6T45AKNl8OjL_?usp=drive_link'},
-    {t:'Vol. 7', d:'Oct 31, 2023', feat:'Never successfully uploaded to Spotify. Feats: CREEPMXNE JOEDAH SWERVE SILVAROUNDS STAKILLAZ CONFIRMBACKUP, NETHER PHONK, $WEATERGOD, DJ WAZ, DITRO, YOTOTA PLAYA 189, NXVERSOUL, SILEIGHTY, STIGMA PLAYA, ACXD PLAYA, DVNTE, UZIMANE, STUPIDMANE, KILLAMANE, DJ STANG, HENTHIG, THXDXVE, CAMOMANE, REMYMANE, DIRSA, BIG PROBLEM MAC', img:'../assets2/vol7.png', dl:'https://drive.google.com/drive/folders/1vlvvvw1XUj1ra_Eqp94K_N-RbjxRh86k?usp=drive_link'},
+    {t:'Vol. 7', d:'Oct 31, 2023', feat:'This album wanst uploaded on spotify, or even has deleted tracks, we just wanted to archive it. ', img:'../assets2/vol7.png', dl:'https://drive.google.com/drive/folders/1vlvvvw1XUj1ra_Eqp94K_N-RbjxRh86k?usp=drive_link'},
   ];
   const MEMBER_TAPES = [
-    {t:'Yo Turn (single)', d:'Aug 9, 2024', feat:'A deleted song made by Always Proper x Remymane x camo mane that was deleted, later found on a sketchy chinese website called QQ music', img:'../assets2/Yo%20Turn.jpg', dl:'https://drive.google.com/drive/folders/1vAFgva9ML89Da03wvHKbs6V2VBlcTcmt?usp=drive_link'},
-    {t:'UZIPUMP Drumkit Promotion', d:'Sep 23, 2020', feat:'A drumkit showcase by the duo UziPump * we might remake the drumkit some time. Feats: UZIMANE & PUMPMANE', img:'https://raw.githubusercontent.com/mrpolaroidfreshandclean/Cowbell-Cult-Archive/refs/heads/main/assets2/UZIMANE-UZIPUMP_DRUMKIT_PROMOTION.jpg', dl:'https://drive.google.com/drive/folders/1thdx1pHI7GQ36Zny92D-UlOdqGw24Wce?usp=drive_link'},
+    
+    {t:'Yo Turn (single)', d:'Aug 9, 2024', feat:'A deleted song made by Always Proper x Remymane x camo mane that was deleted, later found in a sketchy chinese website called y.qq', img:'../assets2/Yo%20Turn.jpg', dl:'https://drive.google.com/drive/folders/1vAFgva9ML89Da03wvHKbs6V2VBlcTcmt?usp=drive_link'},
+    {t:'Yo Turn (single)', d:'Aug 9, 2024', feat:'Song by THXWINTER PLAYA, song removed from Cowbell cult spotify, only available on his soundcloud.', img:'../assets2/DEAD BLONDE.jpg', dl:'https://drive.google.com/drive/folders/1QNXeCzGi93vwv8KfLtWfnxzFebANac69?usp=drive_link'},
+    {t:'Yo Turn (single)', d:'Aug 9, 2024', feat:'Song by THXWINTER PLAYA, song removed from Cowbell cult spotify, only available on his soundcloud.', img:'../assets2/pain.jpg', dl:'https://drive.google.com/drive/folders/1-EdjhigEawQIt6kg4CmU8tARY4a29fDs?usp=drive_link'},
+    {t:'UZIPUMP Drumkit Promotion', d:'Sep 23, 2020', feat:'🚨This song is only a showcase, the Drum Kit is the real LOST MEDIA ,Uzimane was giving for free for a limited time, *we will add kicks and hithats that were used in this showcase. Feats: UZIMANE & PUMPMANE', img:'https://raw.githubusercontent.com/mrpolaroidfreshandclean/Cowbell-Cult-Archive/refs/heads/main/assets2/UZIMANE-UZIPUMP_DRUMKIT_PROMOTION.jpg', dl:'https://drive.google.com/drive/folders/1thdx1pHI7GQ36Zny92D-UlOdqGw24Wce?usp=drive_link'},
   ];
   function render(list, mountId){
     const mount = document.getElementById(mountId);
