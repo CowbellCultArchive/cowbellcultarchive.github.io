@@ -12,7 +12,8 @@ LINKS:
 
 WEBSITE PREVIEW:
 
-<img width="1355" height="656" alt="image" src="https://github.com/user-attachments/assets/2f29ce29-9587-4b75-b948-cd14f17577e8" />
+<img width="1366" height="610" alt="image" src="https://github.com/user-attachments/assets/c8de41d9-9bf4-4e9b-9816-5aefefeb73ec" />
+
 
 
 Archiving the phonk collective Cowbell Cult’s entire discography.
